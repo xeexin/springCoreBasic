@@ -15,16 +15,23 @@ import spring.springCoreBasic.order.OrderServiceImpl;
 
 @Configuration
 public class AppConfig {
+    // @Bean memberService() -> new MemoryMemberRepository();
+    // @Bean orderService() -> new MemoryMemberRepository(), discountPolicy();
+    // new MemoryMemberRepository() 두번 호출 --> 싱글톤이 위반 되는거 아닌가
+
     @Bean
     public MemberService memberService(){
+        System.out.println("Call : AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
     @Bean
     public  MemberRepository memberRepository() {
+        System.out.println("Call : AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
     @Bean
     public OrderService orderService() {
+        System.out.println("Call: AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
     @Bean
