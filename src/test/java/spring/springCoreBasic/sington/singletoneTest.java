@@ -3,6 +3,8 @@ package spring.springCoreBasic.sington;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.springCoreBasic.AppConfig;
 import spring.springCoreBasic.member.MemberService;
 
@@ -39,5 +41,21 @@ public class singletoneTest {
         System.out.println("SingtonService2 " + singletonService2);
 
         assertThat(singletonService).isEqualTo(singletonService2);
+    }
+
+    @Test
+    @DisplayName("스프링 컨테이너와 싱글톤")
+    void SpringContainer() {
+        //AppConfig appConfig = new AppConfig();
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        MemberService memberService = ac.getBean("memberService", MemberService.class);
+        MemberService memberService2 = ac.getBean("memberService", MemberService.class);
+
+         System.out.println("memberService1 " + memberService);
+        System.out.println("memberService2 " + memberService2);
+
+        // memberService != memberService2
+        assertThat(memberService).isSameAs(memberService2);
     }
 }
