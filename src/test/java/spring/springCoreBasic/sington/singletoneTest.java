@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import spring.springCoreBasic.AppConfig;
 import spring.springCoreBasic.member.MemberService;
 
+import static org.assertj.core.api.Assertions.*;
+
 public class singletoneTest {
     @Test
     @DisplayName("스프링 없는 순수한 DI 컨테이너")
@@ -18,12 +20,24 @@ public class singletoneTest {
         //2. 조회 : 호출할 때마다 객체를 생성
         MemberService memberService2 = appConfig.memberService();
 
-        //3. 참조값이 다른 것을 확인 -> 클라이언트가 호출할 때마다, 다른 객체를 생성하면 비효율적임 
+        //3. 참조값이 다른 것을 확인 -> 클라이언트가 호출할 때마다, 다른 객체를 생성하면 비효율적임
         System.out.println("memberService1 " + memberService);
         System.out.println("memberService2 " + memberService2);
 
         // memberService != memberService2
-        Assertions.assertThat(memberService).isNotSameAs(memberService2);
+        assertThat(memberService).isNotSameAs(memberService2);
 
+    }
+
+    @Test
+    @DisplayName("싱글톤 패턴을 적용한 객체 사용")
+    void SingletonServiceTest() {
+        SingletonService singletonService = SingletonService.getInstance();
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        System.out.println("SingtonService1 " + singletonService);
+        System.out.println("SingtonService2 " + singletonService2);
+
+        assertThat(singletonService).isEqualTo(singletonService2);
     }
 }
