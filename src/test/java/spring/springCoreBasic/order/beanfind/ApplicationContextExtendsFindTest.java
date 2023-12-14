@@ -1,4 +1,4 @@
-package spring.springCoreBasic.beanfind;
+package spring.springCoreBasic.order.beanfind;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
