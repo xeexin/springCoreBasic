@@ -7,7 +7,6 @@ import spring.springCoreBasic.annotation.MainDiscountPolicy;
 import spring.springCoreBasic.member.Grade;
 import spring.springCoreBasic.member.Member;
 @Component
-@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
     private int discountPercent = 10;
     @Override
