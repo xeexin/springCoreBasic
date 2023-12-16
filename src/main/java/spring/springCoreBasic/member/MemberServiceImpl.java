@@ -1,6 +1,7 @@
 package spring.springCoreBasic.member;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,6 +12,11 @@ public class MemberServiceImpl implements MemberService {
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
+
+//    @Autowired // = ac.getBean(MemberRepository.class)
+//    public MemberServiceImpl(@Qualifier("memberRepository") MemberRepository memberRepository) {
+//        this.memberRepository = memberRepository;
+//    }
 
     @Override
     public void join(Member member) {
