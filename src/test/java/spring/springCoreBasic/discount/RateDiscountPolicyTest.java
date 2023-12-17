@@ -1,13 +1,12 @@
 package spring.springCoreBasic.discount;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import spring.springCoreBasic.member.Grade;
 import spring.springCoreBasic.member.Member;
+import spring.springCoreBasic.member.discount.RateDiscountPolicy;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class RateDiscountPolicyTest {
     RateDiscountPolicy discountPolicy = new RateDiscountPolicy();

@@ -6,8 +6,6 @@ import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import spring.springCoreBasic.AppConfig;
-import spring.springCoreBasic.discount.DiscountPolicy;
 import spring.springCoreBasic.member.MemberRepository;
 import spring.springCoreBasic.member.MemoryMemberRepository;
 

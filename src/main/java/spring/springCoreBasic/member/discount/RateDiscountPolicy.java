@@ -1,9 +1,6 @@
-package spring.springCoreBasic.discount;
+package spring.springCoreBasic.member.discount;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import spring.springCoreBasic.annotation.MainDiscountPolicy;
 import spring.springCoreBasic.member.Grade;
 import spring.springCoreBasic.member.Member;
 @Component

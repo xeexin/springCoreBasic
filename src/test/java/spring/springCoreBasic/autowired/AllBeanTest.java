@@ -1,12 +1,11 @@
 package spring.springCoreBasic.autowired;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring.springCoreBasic.AutoAppConfig;
-import spring.springCoreBasic.discount.DiscountPolicy;
+import spring.springCoreBasic.member.discount.DiscountPolicy;
 import spring.springCoreBasic.member.Grade;
 import spring.springCoreBasic.member.Member;
 

@@ -6,10 +6,9 @@ import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import spring.springCoreBasic.AppConfig;
-import spring.springCoreBasic.discount.DiscountPolicy;
-import spring.springCoreBasic.discount.FixDiscountPolicy;
-import spring.springCoreBasic.discount.RateDiscountPolicy;
+import spring.springCoreBasic.member.discount.DiscountPolicy;
+import spring.springCoreBasic.member.discount.FixDiscountPolicy;
+import spring.springCoreBasic.member.discount.RateDiscountPolicy;
 
 import java.util.Map;
 

@@ -18,5 +18,5 @@
     </bean>
 
     <bean id="discountPolicy"
-          class="spring.springCoreBasic.discount.RateDiscountPolicy"/>
+          class="spring.springCoreBasic.member.discount.RateDiscountPolicy"/>
 </beans>
