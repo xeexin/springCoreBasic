@@ -16,3 +16,4 @@ public class RateDiscountPolicy implements DiscountPolicy {
 
     }
 }
+
