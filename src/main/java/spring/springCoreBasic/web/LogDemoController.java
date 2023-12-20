@@ -13,14 +13,13 @@ import spring.springCoreBasic.common.MyLogger;
 @RequiredArgsConstructor
 public class LogDemoController {
     private final LogDemoService logDemoService;
-    private final ObjectProvider<MyLogger> myLoggerObjectProvider;
+    private final MyLogger myLogger;
 
     @RequestMapping("log-demo")
     @ResponseBody
     public String logDemo(HttpServletRequest request) {
         String requestUrl = request.getRequestURI().toString();
 
-        MyLogger myLogger = myLoggerObjectProvider.getObject();
         myLogger.setRequestURL(requestUrl);
 
         myLogger.log("controller test");
